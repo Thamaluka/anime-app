@@ -1,0 +1,12 @@
+.Title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 15px;
+}
+
+
+@media all and (max-width: 1200px)  {
+  /* Change Resolutions Here */
+  .Title {
+    font-size: 8px;
+  }
+}

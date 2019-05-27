@@ -1,0 +1,44 @@
+.App {
+  background-image: url("../src/assets/bg.jpg");
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+.Card {
+  min-height: 100vh;
+
+}
+
+.Pres {
+  color: white;
+}
+.TextRed {
+  color: red;
+}
+
+.Container {
+  margin: 10px;
+  flex-direction: row;
+}
+
+.Header {
+  text-align: end;
+}
+
+.Logo {
+  text-align: center;
+  font-size: 15px;
+}
+
+.git{
+  font-size: 20px;
+  color:white;
+}
+
+.linked {
+  background-color: #0077b5;
+  padding: 2px;
+  border-radius: 3px;
+  margin:5px;
+  color:white;
+}

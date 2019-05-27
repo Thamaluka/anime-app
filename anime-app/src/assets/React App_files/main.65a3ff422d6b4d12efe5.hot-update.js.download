@@ -1,0 +1,118 @@
+webpackHotUpdate("main",{
+
+/***/ "./src/views/ListCard/ListCard.js":
+/*!****************************************!*\
+  !*** ./src/views/ListCard/ListCard.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ListCard_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ListCard.css */ "./src/views/ListCard/ListCard.css");
+/* harmony import */ var _ListCard_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ListCard_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core_GridList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/GridList */ "./node_modules/@material-ui/core/esm/GridList/index.js");
+/* harmony import */ var _material_ui_core_GridListTile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/GridListTile */ "./node_modules/@material-ui/core/esm/GridListTile/index.js");
+/* harmony import */ var _components_AnimeCard_AnimeCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/AnimeCard/AnimeCard */ "./src/components/AnimeCard/AnimeCard.js");
+/* harmony import */ var _services_AnimeService__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../services/AnimeService */ "./src/services/AnimeService.js");
+/* harmony import */ var _material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/CircularProgress */ "./node_modules/@material-ui/core/esm/CircularProgress/index.js");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/index.js");
+var _jsxFileName = "C:\\Users\\T-Gamer\\Desktop\\anime-app\\anime-app\\src\\views\\ListCard\\ListCard.js";
+
+
+
+
+
+
+
+
+
+class ListCard extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      animeList: []
+    };
+  }
+
+  async componentDidMount() {
+    const _ref = await _services_AnimeService__WEBPACK_IMPORTED_MODULE_5__["default"].getAllAnimes(),
+          data = _ref.data;
+
+    this.setState({
+      animeList: data.data
+    });
+  }
+
+  render() {
+    return this.state.animeList.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_GridList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      cols: 3,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      id: "standard-full-width",
+      label: "Label",
+      style: {
+        margin: 8
+      },
+      placeholder: "Placeholder",
+      helperText: "Full width!",
+      fullWidth: true,
+      margin: "normal",
+      InputLabelProps: {
+        shrink: true
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }), this.state.animeList.map(anim => {
+      const tlt = anim.attributes.titles.en_jp != null ? anim.attributes.titles.en_jp : anim.attributes.abbreviatedTitles[0];
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_GridListTile__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        key: anim.id,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_AnimeCard_AnimeCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        id: anim.id,
+        title: tlt,
+        image: anim.attributes.posterImage.original,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43
+        },
+        __self: this
+      }));
+    })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "Loading",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      color: 'secondary',
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    }));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (ListCard);
+
+/***/ })
+
+})
+//# sourceMappingURL=main.65a3ff422d6b4d12efe5.hot-update.js.map
