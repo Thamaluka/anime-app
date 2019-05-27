@@ -1,0 +1,18 @@
+.Details{
+   text-align: left;
+   margin:10px;
+   font-size: 12px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.DateIcon{
+    margin-right: 5px;
+    color: gray;
+}
+
+.StarIcon{
+    margin-right: 5px;
+    color: orange;
+    font-size: 15px;
+    
+}

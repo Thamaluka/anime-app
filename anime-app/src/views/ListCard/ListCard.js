@@ -40,7 +40,7 @@ class ListCard extends React.Component {
         <div>
           <div style={{ marginRight: 10, display: 'flex', justifyContent: 'center', backgroundColor: 'white', margin: 10, borderRadius: 35 , alignItems:'center' }}>
             <div style={{fontSize:25}}>
-               <i class="fas fa-search"></i>
+               <i className="fas fa-search"></i>
             </div>
          
             <TextField

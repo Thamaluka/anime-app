@@ -23,7 +23,6 @@ class AnimeDetail extends React.Component {
 
     render() {
         const anime = this.state.anime;
-        console.log(anime)
         return (
             this.state.anime !== null &&
             <div style={{ color: 'white' }}>
@@ -34,26 +33,44 @@ class AnimeDetail extends React.Component {
                             image={anime.attributes.posterImage.original}
                         />
                         <CardContent>
-                            <h1>{anime.attributes.canonicalTitle}</h1>
-                            <div style={{ display: 'flex' }}>
-                                <div style={{ justifyContent: 'flex-end' }}>
 
-                                    <div>
-                                        <i class="fas fa-calendar-alt"></i>
-                                        Start Date: {anime.attributes.startDate}
+                            <div style={{ display: 'flex' }}>
+                                <div style={{ flexDirection: 'column', width: '85%' }}>
+                                    <h1>{anime.attributes.canonicalTitle}</h1>
+                                    <div style={{ textAlign: 'left' }}>
+                                        {anime.attributes.synopsis}
                                     </div>
 
+                                </div>
+
+                                <div style={{ flexDirection: 'column' }}>
                                     <div>
-                                        <i class="fas fa-calendar-alt"></i>
-                                        End Date: {anime.attributes.endDate}</div>
+                                        <div className={'Details'}>
+                                            <i className="fas fa-calendar-alt DateIcon"></i>
+                                            Start at: {anime.attributes.startDate}
+                                        </div>
+
+                                        <div className={'Details'}>
+                                            <i className="fas fa-calendar-alt DateIcon"></i>
+                                            End at: {anime.attributes.endDate}
+                                        </div>
+                                        <div className={'Details'}>
+                                            <i className="fas fa-star StarIcon"></i>
+                                            Average Rating: {anime.attributes.averageRating}
+                                        </div>
+                                        <div className={'Details'}>
+                                            Status: {anime.attributes.status}
+                                        </div>
+
+
+                                    </div>
+
+
                                 </div>
 
                             </div>
 
 
-                            <div style={{ textAlign: 'left' }}>
-                                {anime.attributes.synopsis}
-                            </div>
                         </CardContent>
                     </CardActionArea>
                 </Card>
